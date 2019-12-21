@@ -1,0 +1,22 @@
+{
+	"name": "Change my UserAgent",
+	"version": "0.01",
+	"permissions": [
+		"webRequest",
+		"webRequestBlocking",
+		"storage",
+		"<all_urls>"
+	],
+
+	"background": {
+        "scripts": ["background.js"],
+        "persistent": true
+    },
+
+    "browser_action": {
+        "default_title": "Change my user agent",
+        "default_popup": "popup.html"
+    },
+
+    "manifest_version": 2
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Change My User Agent</title>
+	<style>
+		html {
+			box-shadow: 0 0 2px rgba(0,0,0,.2);
+		}
+		body {
+			margin: 0;
+			padding: 0;
+		}
+		* {
+			font-family: sans-serif;
+		}
+		.popup {
+			display: block;
+			width: 300px;
+			height: 330px;
+		}
+		h2 {
+			text-transform: uppercase;
+			font-size: 17px;
+			text-align: center;
+			margin: 10px 0;
+			padding: 0;
+		}
+		main {
+			justify-content: center;
+		    display: flex;
+		    padding: 0 20px;
+		    flex-direction: column;
+		}
+		label {
+			margin-top: 10px;
+			width: 100%;
+		}
+		input,
+		button,
+		select {
+			width: 100%;
+		    height: 20px;
+		    padding: 0;
+		    display: block;
+		    box-sizing: border-box;
+		    margin: 0 0 5px 0;
+		}
+		#error {
+			position: absolute;
+			top: 0;
+			line-height: 30px;
+			font-size: 10px;
+			text-align: center;
+			opacity: 0;
+			width: 100%;
+			height: 30px;
+			background: red;
+			color: #fff;
+			text-transform: uppercase;
+			transition: opacity .5s ease;
+		}
+		#error.show {
+			opacity: 1;
+		}
+	</style>
+</head>
+<body>
+	<div class="popup">
+		<div id="error">
+			Please stay here
+		</div>
+		<h2>Change user agent</h2>
+		<main>
+			<label>
+				Choose your user agent
+				<select name="user-agent-list" id="ua-list">
+					<option name="a" value="1">1</option>
+					<option name="b" value="2">2</option>
+				</select>
+			</label>
+			<br>
+			<label>
+				Or add your own
+				<input name="ua-name" id="ua-name" placeholder="Name">
+				<input name="ua-value" id="ua-value" placeholder="User agent string">
+				<button id="ua-add">add</button>
+			</label>
+			<button id="ua-confirm">Confirm</button>
+			<label>
+				Current UA string:
+				<input type="text" disabled id="ua-current">
+			</label>
+			<button id="reset">Reset UA</button>
+		</main>
+	</div>
+	<script src="popup.js"></script>
+</body>
+</html>
