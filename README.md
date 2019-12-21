@@ -1,2 +1,2 @@
-# chrome_ext_change_ua
+# Change User Agent for chrome
 Extension for change user agent for chrome.
